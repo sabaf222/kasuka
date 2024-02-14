@@ -1,0 +1,123 @@
+.footer-Wrapper{
+    padding:40px 0 30px 0;
+    background-color: #151515;
+    width: 100%;
+    margin-top: 2rem;
+
+}
+.footer-top{
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 0 60px;
+   color: #fff;
+   border-bottom: 1px solid #222222;
+}
+.footer-top__infos h3{
+    display: flex;
+    align-items: center;
+
+}
+.footer-top__infos img{
+    width: 80px;
+    height: 80px;
+}
+.footer-top__infos h3 p{
+font-size:2.2rem ;
+font-weight: 700;
+}
+.footer-top__infos ul{
+    list-style-type: none;
+    margin-top: -2rem;
+    line-height: 24px;
+
+}
+
+.social-media {
+    margin: 1.5rem 1rem 1.5rem 0;
+}
+.social-media a {
+    color: #fff;
+    font-size: 18px;
+    background-color: #292929;
+    margin: 0 5px;
+    border-radius: 4px;
+    padding:4px 8px ;
+    line-height: 1;
+    transition: all .3s;
+}
+
+.social-media a:hover{
+    background-color: #fcc451;
+    color: #151515;
+}
+.links h4{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+    margin-right: 12px;
+    
+}
+.links ul{
+    list-style-type: none;
+    
+}
+.links i{
+    font-size: 14px ;
+    color: #fcc451;
+    padding-left: 5px;
+}
+.links a{
+    color: #fff;
+    transition: all .3s linear;
+    font-size: 14px;
+    line-height: 2rem;
+}
+.links a:hover{
+    color: #fcc451;
+    
+}
+form{
+    margin: 2.5rem 3rem ;
+}
+#text ,#submit{
+    padding: 10px ;
+    box-shadow: 0 2px 5px rgba(0, 0,0,.4);
+    border: none;
+    outline: none;
+}
+#submit{
+    background-color: #fcc451;
+    color: #484848;
+ border-top-left-radius: 5px;
+ border-bottom-left-radius: 5px;
+ cursor: pointer;
+
+}
+#text{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-indent: 10px;
+
+}
+.footer-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px  20px 10px 20px;
+    line-height: 2rem;
+    color: #fff;
+}
+.copyright{
+    font-size: 14px;
+}
+.copyright span{
+    padding: 0 5px;
+}
+.create a{
+    color: #fcc451;
+    padding: 0 5px;
+}

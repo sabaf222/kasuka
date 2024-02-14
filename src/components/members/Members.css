@@ -1,0 +1,79 @@
+
+.members{
+    padding: 60px;
+}
+.title::before{
+ 
+}
+.member-box{
+    width: 280px;
+ border-radius: 10px!important;
+    box-shadow: 0 2px 4px rgba(21, 21, 21, .15);
+  
+}
+
+.member-box img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative!important;
+
+}
+.member-infos{
+    text-align:  center;
+    padding: 5px 0;
+  line-height: 8px;
+}
+.member-infos h4{
+    font-size: 18px;
+    font-weight: 700;
+    
+    color: #151515;
+}
+.member-infos span{
+    display: block;
+    font-size: 14px ;
+    color: #aaaaaa;
+    font-weight: 500;
+    margin:1rem 0 ;
+}
+.members-box-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3rem!important;
+  
+}
+.social{
+    position: absolute;
+    width: 100%;
+    margin: -3rem 2rem;
+   
+
+   
+}
+.social a{
+    padding: 0 .5rem;
+    color: #484848;
+    background:rgba(255, 255, 255, 0.6);
+    width:26px ;
+    height: 36px;
+    margin: 0 3px;
+    display: inline-flex ;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    transition: all .3s linear 
+    ;
+    opacity: 0;
+
+}
+.social a:hover{
+    background-color: #fcc451;
+
+}
+.social:hover a{
+    opacity: 1;
+}

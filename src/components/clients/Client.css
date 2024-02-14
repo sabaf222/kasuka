@@ -1,0 +1,18 @@
+.client-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width:100%;
+    margin-bottom: 4rem;
+}
+.client-wrapper img{
+    opacity: .5;
+    width: 100px;
+    filter: grayscale(100);
+    transition: all .3s linear;
+
+}
+.client-wrapper img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+}

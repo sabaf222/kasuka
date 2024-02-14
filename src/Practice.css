@@ -1,0 +1,13 @@
+.card{
+    width: 300px;
+    border: 1px solid #eee;
+    height: auto;
+    box-shadow: 0 3px 5px rgba(0, 0,0, .3);
+}
+.card img{
+    width: 100%;
+}
+.card h4{
+    color: #ccc;
+    font-size: 1.3rem;
+}
