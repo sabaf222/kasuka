@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './header/Header';
+import Company from './components/aboutCompany/company';
+import Client from './components/clients/Client';
+import Feature from './components/features/Feature';
+import Services from './components/services/Services';
+import Cta from './components/cta/Cta';
+import Portfolio from './components/portfolio/portfolio';
+import Counts from './components/counts/Counts';
+import Team from './components/teams/Teams';
+import Members from './components/members/Members';
+import ConnectUs from './components/conectUs/ConnectUS';
+import Footer from './components/footer/Footer';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+     <Header></Header>
+     <Company></Company>
+     <Client></Client>
+     <Feature></Feature>
+     <Services></Services>
+     <Cta></Cta>
+    <Portfolio></Portfolio>
+    <Counts></Counts>
+    <Team></Team>
+    <Members></Members>
+    <ConnectUs></ConnectUs>
+  <Footer></Footer>
+
     </div>
   );
 }
