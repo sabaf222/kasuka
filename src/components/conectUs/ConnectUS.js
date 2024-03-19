@@ -1,13 +1,42 @@
 import './ConnectUS.css'
 import '../services/Services.css'
 import Address from './Address'
+import { useState } from 'react'
+
 function ConnectUs() {
-    const addressInfos = [
+    const [addressInfos, setAddressInfos] = useState([
         { id: 1, icon: "fas fa-location", title: "مکان :", subtitle: "تهران خیابان آزادی" },
         { id: 2, icon: "fa fa-envelope", title: "ایمیل :", subtitle: "info@example.com" },
         { id: 3, icon: "fa fa-phone", title: "شماره تماس :", subtitle: "012345667" },
 
-    ]
+    ])
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [title, setTitle] = useState('')
+    const [msg, setMessage] = useState('')
+    // const [msgID,setMsgID]=useState('')
+
+//
+    const sendMessageHandler =async (event) => {
+        event.preventDefault()
+        
+        console.log('submit');
+        let newMessage = {
+            name,
+            email,
+            title,
+            msg
+        }
+      await  fetch(`https://kasuka-17a9e-default-rtdb.firebaseio.com/commants.json`, {
+            method: 'POST',
+           
+            body:JSON.stringify(newMessage)
+        })
+                       
+    }
+
+ 
+
     return (
         <div className="conectUs-wrapper">
 
@@ -23,22 +52,23 @@ function ConnectUs() {
 
                     <div className="row">
                         <div className="adderss">
-                            <Address {...addressInfos[0]}></Address>
-                            <Address {...addressInfos[1]}></Address>
-                            <Address {...addressInfos[2]}></Address>
+                            {addressInfos.map(infos => (
+
+                                <Address {...infos}></Address>
+                            ))}
 
                         </div>
-                        <div className="form">
+                        <form className="form" onSubmit={sendMessageHandler}>
                             <div className="">
 
-                            <input type="text" placeholder='نام' />
-                            <input type="email" placeholder='ایمیل' />
+                                <input type="text" placeholder='نام' value={name} onChange={(event)=>setName(event.target.value)} />
+                                <input type="email" placeholder='ایمیل' value={email} onChange={(event)=>setEmail(event.target.value)} />
                             </div>
-                            <input type="text" placeholder='عنوان' />
-                            <textarea name="" placeholder='پیام' id="" ></textarea>
-                            <button>ارسال  پیام</button>
-
-                        </div>
+                            <input type="text" placeholder='عنوان' value={title} onChange={(event=>setTitle(event.target.value))} />
+                            <textarea name="" placeholder='پیام' id="" value={msg} onChange={event=>setMessage(event.target.value)} ></textarea>
+                            <button >ارسال  پیام</button>
+                            
+                        </form>
                     </div>
 
                 </div>

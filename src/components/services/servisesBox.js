@@ -1,16 +1,16 @@
 import './Services.css'
-function ServicesBox({icon,title,desc,}) {
+function ServicesBox(props) {
     return (
         <div className="services-box">
             <div className="icon">
-                <i className={icon} ></i>
+                <i className={props.icon} ></i>
             </div>
             <h4>
-                <a href=""> {title}</a>
+                <a href=""> {props.title}</a>
             </h4>
         
 
-            <p>{desc}</p>
+            <p>{props.desc}</p>
 
 
         </div>

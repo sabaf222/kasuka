@@ -1,8 +1,9 @@
 import './Features.css'
 import Box from './Box'
+import {useState} from 'react'
 
 function Feature() {
-    const FeatureBox=[
+    const [FeatureBox,setFeatureBox]=useState([
         {id:1 , icon:"fas fa-receipt " ,title:"تبلیغ سخنی است", desc:"نتایج یا در نتیجه هر یک از این اهداف اشتغال حاصل می شوند"},
        
        {id:2,icon:"fa fa-cube " ,title:"کدام یک از اینهاست", desc:"کسانی که هوس سیاهان می کنند نمی بینند ، آنها مقصر هستند که خدمات خود را رها کرده اند"},
@@ -12,16 +13,17 @@ function Feature() {
        
        
        
-    ]
+    ])
     return (
 
         <div className="features-wrapper">
             <img src="img/feat.jpg" alt="" srcset="" />
             <div className="icon-box-wrapper">
-                <Box  {...FeatureBox[0]}></Box>
-                <Box  {...FeatureBox[1]}></Box>
-                <Box {...FeatureBox[2]} ></Box>
-                <Box {...FeatureBox[3]} ></Box>
+                {FeatureBox.map(box=>(
+
+                <Box  {...box}></Box>
+                ))}
+               
 
 
 

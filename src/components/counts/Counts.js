@@ -1,7 +1,8 @@
 import './Counts.css'
 import CountBox from './ContBox'
+import { useState } from 'react'
 function Counts() {
-const countBoxInfos=[
+const [countBoxInfos,setCoutBoxInfos]=useState([
     
     {id:"1",icon:"fas fa-smile-beam",count:65,boldDesc:"مشتریان خوشحال" ,desc:"خوشحالیم که از معمار چیزی دریافت کنیم."},
     {id:"2",icon:"fas fa-journal-whills",count:85,boldDesc:"پروژها", desc:" برای بدست آوردن و زمانی که او کل کسانی را که از او تعریف می کنند رد می کند و آنها را حقیر می شمارد"},
@@ -9,7 +10,8 @@ const countBoxInfos=[
     {id:"4",icon:"fas fa-award",count:20,boldDesc:"جوایز", desc:" درد دردناک تر است در زمانی دیگر که هیچکس او را متهم نمی کند و هیچ وقت او را متهم نمی کند"},
 
 
-]
+])
+
 
     return (
         <div className="counts-wrapper">
@@ -25,12 +27,11 @@ const countBoxInfos=[
                 </p>
                 </div>
                 <div className="count-box-wrapper">
+                {countBoxInfos.map(box=>(
 
-                <CountBox {...countBoxInfos[0]}></CountBox>
-                <CountBox {...countBoxInfos[1]}></CountBox>
-                <CountBox {...countBoxInfos[2]}></CountBox>
-                <CountBox {...countBoxInfos[3]}></CountBox>
-
+                <CountBox {...box}></CountBox>
+                ))}
+               
                 </div>
 
 

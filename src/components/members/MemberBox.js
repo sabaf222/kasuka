@@ -1,8 +1,8 @@
 import './Members.css'
-function MemberBox({img,name,job}){
+function MemberBox(props){
     return(
         <div className="member-box">
-            <img src={img} alt="" srcset="" />
+            <img src={props.img} alt="" srcset="" />
             <div class="social">
                   <a href=""><i class="fab fa-twitter    "></i></a>
                   <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
@@ -11,8 +11,8 @@ function MemberBox({img,name,job}){
                 </div>
             <div className="member-infos">
 
-            <h4>{name}</h4>
-            <span>{job}</span>
+            <h4>{props.name}</h4>
+            <span>{props.job}</span>
             </div>
 
         </div>

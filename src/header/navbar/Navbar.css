@@ -38,13 +38,13 @@
 .navbar__list-item{
     list-style-type: none;
 }
-.navbar__link{
+#navbar__link{
     font-size: 15px ;
     padding:0 1rem;
     display: flex;
     align-items: center;
 }
-.navbar__link i{
+#navbar__link i{
     margin-right: 5px;
 }
 .navbar a{
@@ -89,5 +89,7 @@
     transition: all .3s linear !important;
  }
  .subtitle-link:hover{
+    color: #ffc451 !important;
+ } .active{
     color: #ffc451 !important;
  }

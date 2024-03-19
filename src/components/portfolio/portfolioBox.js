@@ -1,10 +1,10 @@
 import './Portfolio.css'
 
-function PortfolioBox({img}) {
+function PortfolioBox(props) {
     return(
 
             <div className="portfolio">
-                <img className='protfoilo-img' src={img} alt="" srcset="" />
+                <img className='protfoilo-img' src={props.img} alt="" srcset="" />
                
         
             </div>

@@ -1,11 +1,12 @@
 import './Features.css'
-function Box({icon,title,desc}){
+function Box(props){
+    
     return(
         <div className="icon-box">
-            <i class={icon}></i>
+            <i class={props.icon}></i>
             <span>
-            <h4>{title}</h4>
-            <p>{desc}</p>
+            <h4>{props.title}</h4>
+            <p>{props.desc}</p>
             </span>
             
         </div>

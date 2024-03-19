@@ -1,13 +1,13 @@
   
   import './HeaderBox.css'
-  function Box({icon,title}){
+  function Box(props){
     
     return(
         <div className="card-wrapper">
             <div className="card">
-                <i class={icon}></i>
+                <i class={props.icon}></i>
                 <h3>
-                    <a href="">{title}</a>
+                    <a href="">{props.title}</a>
                 </h3>
             </div>
 

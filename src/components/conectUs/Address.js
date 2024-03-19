@@ -1,12 +1,12 @@
 import './ConnectUS.css'
-function Address({icon,title,subtitle}){
+function Address(props){
     return(
         <div className="address">
-            <i class={icon}></i>
+            <i class={props.icon}></i>
             <div >
 
-            <h4 >{title}</h4>
-            <p>{subtitle}</p>
+            <h4 >{props.title}</h4>
+            <p>{props.subtitle}</p>
             </div>
             
 
